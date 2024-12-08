@@ -1,0 +1,12 @@
+services:
+  - name: imagetopdf-api
+    type: web
+    env: python
+    buildCommand: "pip install -r requirements.txt"
+    startCommand: "flask run --host=0.0.0.0 --port=10000"
+    envVars:
+      - key: FLASK_APP
+        value: imagetopdf/views.py
+      - key: FLASK_ENV
+        value: production
+    staticPublishPath: ""
