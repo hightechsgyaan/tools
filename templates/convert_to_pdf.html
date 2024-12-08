@@ -1,0 +1,21 @@
+<!-- templates/convert_to_pdf.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Convert Images to PDF</title>
+</head>
+<body>
+    <h1>Convert Images to PDF</h1>
+    <form action="/api/convert-to-pdf" method="post" enctype="multipart/form-data">
+        <label for="images">Select Images:</label>
+        <input type="file" name="images" multiple><br><br>
+
+        <label for="output_name">Output PDF Name:</label>
+        <input type="text" name="output_name"><br><br>
+
+        <input type="submit" value="Convert to PDF">
+    </form>
+</body>
+</html>
